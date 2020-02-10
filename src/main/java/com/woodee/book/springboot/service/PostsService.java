@@ -3,12 +3,16 @@ package com.woodee.book.springboot.service;
 
 import com.woodee.book.springboot.domain.posts.Posts;
 import com.woodee.book.springboot.domain.posts.PostsRepository;
+import com.woodee.book.springboot.web.dto.PostsListResponseDto;
 import com.woodee.book.springboot.web.dto.PostsResponseDto;
 import com.woodee.book.springboot.web.dto.PostsSaveRequestDto;
 import com.woodee.book.springboot.web.dto.PostsUpdateRequestsDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -32,7 +36,7 @@ public class PostsService {
         return id;
     }
 
-    //조회
+    //한개의 게시물 조회
     public PostsResponseDto findById (Long id){
         Posts entity = postsRepository.findById(id)
                 .orElseThrow(()-> new IllegalArgumentException("해당 사용자가 없습니다. id="+id));
@@ -40,5 +44,11 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
 
-
+    //리스트 조회
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
+    }
 }

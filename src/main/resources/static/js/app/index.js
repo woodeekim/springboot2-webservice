@@ -8,7 +8,7 @@ var index = {
         $('#btn-update').on('click', function () {
             _this.update();
         });
-l
+
         $('#btn-delete').on('click', function () {
             _this.delete();
         });
