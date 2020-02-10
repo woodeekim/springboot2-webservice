@@ -43,7 +43,7 @@ public class PostsApiControllerTest {
 
     @Test
     public void Posts_등록된다() throws Exception {
-        //given
+        //g iven
         String title = "title";
         String content = "content";
         PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
