@@ -19,11 +19,12 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'com.woodee.book'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
     jcenter()
+
 }
 
 
@@ -32,8 +33,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.projectlombok:lombok:1.18.8')
     compile('org.springframework.boot:spring-boot-starter-mustache')
-    annotationProcessor("org.projectlombok:lombok:1.18.8")
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('com.h2database:h2')
+
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("org.springframework.security:spring-security-test")
