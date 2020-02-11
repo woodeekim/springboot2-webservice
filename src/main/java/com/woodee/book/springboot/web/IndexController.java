@@ -1,5 +1,6 @@
 package com.woodee.book.springboot.web;
 
+import com.woodee.book.springboot.config.auth.LoginUser;
 import com.woodee.book.springboot.config.auth.dto.SessionUser;
 import com.woodee.book.springboot.domain.user.User;
 import com.woodee.book.springboot.service.PostsService;
@@ -20,13 +21,11 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
-    //글 리스트 조회
+
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
 
         model.addAttribute("posts",postsService.findAllDesc());
-
-        SessionUser user = (SessionUser)httpSession.getAttribute("user");
         if(user != null){
             model.addAttribute("userName", user.getName());
         }
