@@ -2,7 +2,6 @@ package com.woodee.book.springboot.web;
 
 import com.woodee.book.springboot.config.auth.LoginUser;
 import com.woodee.book.springboot.config.auth.dto.SessionUser;
-import com.woodee.book.springboot.domain.user.User;
 import com.woodee.book.springboot.service.PostsService;
 import com.woodee.book.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.mail.Session;
 import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
