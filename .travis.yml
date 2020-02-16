@@ -39,7 +39,7 @@ deploy:
     bundle_type: zip
     application: springboot2-webservice #CodeDeploy
     deployment_group: springboot2-webservice-group #CodeDeploy
-    region: ap-northeast-2
+    region: ap-us-east-2
     wait-until-deployed: true
 
 
