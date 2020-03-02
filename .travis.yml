@@ -23,7 +23,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: woodee-webservice-build
+    bucket: woodee-springboot-build
     #region: ap-northeast-2
     region: us-east-2
     skip_cleanup: true
