@@ -50,3 +50,6 @@ notifications:
   email:
     recipients:
       - woodeekim@gmail.com
+
+#TravisCI->S3->CodeDeploy->EC2 시 region 설정 중요하다.
+#특히 EC2 접속 후 aws s3 cp s3://aws-codedeploy-us-east-2/latest/install . --region us-east-2 다운 받을 때도 마찬가지다.
