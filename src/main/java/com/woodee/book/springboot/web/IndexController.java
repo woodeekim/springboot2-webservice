@@ -28,7 +28,7 @@ public class IndexController {
             model.addAttribute("userName", user.getName());
         }
 
-        return "index";
+        return "main";
     }
 
     //글 등록 화면으로 이동
