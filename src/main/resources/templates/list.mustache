@@ -48,7 +48,7 @@
         <div class="wrap-logo container">
             <!-- Logo desktop -->
             <div class="logo">
-                <a href="index.html"><img src="/images/app/icons/logo-01.png" alt="LOGO"></a>
+                <a href="/"><img src="/images/app/icons/logo-01.png" alt="LOGO"></a>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
             <div class="main-nav">
                 <!-- Menu desktop -->
                 <nav class="menu-desktop">
-                    <a class="logo-stick" href="index.html">
+                    <a class="logo-stick" href="/">
                         <img src="/images/app/icons/logo-01.png" alt="LOGO">
                     </a>
 
@@ -68,7 +68,7 @@
                         </li>
 
                         <li class="main-menu-active">
-                            <a href="/board">게시판</a>
+                            <a href="/list">게시판</a>
                         </li>
                     </ul>
                 </nav>
@@ -76,63 +76,38 @@
         </div>
     </div>
 </header><!--//헤더 -->
-
+<div class="row">
+    <div class="col-md-6">
+        <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+        {{#userName}}
+            Logged in as: <span id="user">{{userName}}</span>
+            <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+        {{/userName}}
+        {{^userName}}
+            <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+            <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+        {{/userName}}
+    </div>
+</div>
 <section class="bg0 p-t-70 p-tb-70">
     <div class="container">
         <div class="band">
 
+        {{#posts}}
             <div class="item-2">
-                <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
+                <a href="/posts/update/{{id}}" class="card">
                     <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);"></div>
                     <article>
-                        <h1>처음 글 씁니다</h1>
+                        <h1>{{title}}</h1>
                         <p>
-                            이렇게 글 작성하는게 맞나요?
+                            {{content}}
                         </p>
-                        <span>김우디</span>
+                        <span>{{author}}</span>
+                        <span>{{modifiedDate}}</span>
                     </article>
                 </a>
             </div>
-            <div class="item-3">
-                <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
-                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);"></div>
-                    <article>
-                        <h1>반갑습니다</h1>
-                        <p>저는 김근경이라고 합니다.</p>
-                        <span>김진짜</span>
-                    </article>
-                </a>
-            </div>
-            <div class="item-4">
-                <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
-                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);"></div>
-                    <article>
-                        <h1>날씨가 따뜻해졌어요</h1>
-                        <p>겨울이 지나가나봐요.하하하</p>
-                        <span>Kezz Bracey</span>
-                    </article>
-                </a>
-            </div>
-            <div class="item-5">
-                <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
-                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);"></div>
-                    <article>
-                        <h1>포트폴리오를 만듭시다.</h1>
-                        <p>시간이 없어요!!!</p>
-                        <span>김가짜</span>
-                    </article>
-                </a>
-            </div>
-            <div class="item-6">
-                <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
-                    <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);"></div>
-                    <article>
-                        <h1>저녁은 뭐먹지?</h1>
-
-                        <span>Marie Gardiner</span>
-                    </article>
-                </a>
-            </div>
+        {{/posts}}
 
         </div>
     </div>

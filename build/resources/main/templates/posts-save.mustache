@@ -1,26 +1,149 @@
-{{>layout/header}}
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <title>김근경</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="/images/app/icons/favicon.png"/>
 
-<h1>게시글 등록</h1>
+    <link rel="stylesheet" type="text/css" href="/css/app/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/fontawesome-5.0.8/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/animate.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/util.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/app/write.css">
+</head>
+<body class="animsition">
 
-<div class="col-md-12">
-    <div class="col-md-4">
-        <form>
-            <div class="form-group">
-                <label for="title">제목</label>
-                <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
+<!-- 헤더 -->
+<header>
+    <div class="container-menu-desktop">
+        <div class="topbar">
+            <div class="content-topbar container h-100">
+                <div class="left-topbar">
+                    <div class="left-topbar-item">
+                        로그인 후 게시판을 이용해주세요.
+                    </div>
+                    <a href="#" class="left-topbar-item">
+                        <i class="fab fa-google-plus-g m-r-7"></i>
+                        Google+
+                    </a>
+                </div>
+                <div class="right-topbar">
+                    <a href="#">
+                        <span class="fab fa-facebook-f"></span>
+                    </a>
+                    <a href="#">
+                        <span class="fab fa-vimeo-v"></span>
+                    </a>
+                    <a href="#">
+                        <span class="fab fa-youtube"></span>
+                    </a>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="author"> 작성자 </label>
-                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
+        </div>
+        <!--로고-->
+        <div class="wrap-logo container">
+            <!-- Logo desktop -->
+            <div class="logo">
+                <a href="/"><img src="/images/app/icons/logo-01.png" alt="LOGO"></a>
             </div>
-            <div class="form-group">
-                <label for="content"> 내용 </label>
-                <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
+        </div>
+
+
+        <!--  -->
+        <div class="wrap-main-nav">
+            <div class="main-nav">
+                <!-- Menu desktop -->
+                <nav class="menu-desktop">
+                    <a class="logo-stick" href="/">
+                        <img src="/images/app/icons/logo-01.png" alt="LOGO">
+                    </a>
+
+                    <ul class="main-menu">
+                        <li class="main-menu-active">
+                            <a href="/">메인</a>
+                        </li>
+
+                        <li class="main-menu-active">
+                            <a href="/list">게시판</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+        </div>
     </div>
-</div>
+</header><!--//헤더 -->
 
-{{>layout/footer}}
+    <div class="contact-w3">
+
+        <form>
+            <label for="title">제목</label>
+            <input type="text"  id="title" placeholder="제목을 입력하세요">
+            <div class="row"></div>
+            <label for="author">작성자</label>
+            <input type="text" id="author" placeholder="작성자를 입력하세요" required>
+            <div class="row1">
+                <label>내용 </label>
+                <textarea id="content" placeholder="내용을 입력하세요"></textarea>
+            </div>
+            <button type="button" class="btn btn-success" id="btn-save">등록</button>
+        </form>
+    </div>
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="bg2 p-t-40 p-b-25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 p-b-20">
+                    <div class="size-h-3 flex-s-c">
+                        <a href="index.html">
+                            <img class="max-s-full" src="/images/app/icons/logo-02.png" alt="LOGO">
+                        </a>
+                    </div>
+
+                    <div>
+                        <p class="f1-s-1 cl11 p-b-16">
+                            환영합니다. 문의가 있으면 메일 주세요.
+                        </p>
+
+                        <p class="f1-s-1 cl11 p-b-16">
+                        </p>
+
+                        <div class="p-t-15">
+                            <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                <span class="fab fa-facebook-f"></span>
+                            </a>
+                            <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                <span class="fab fa-youtube"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to top -->
+<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<span class="fas fa-angle-up"></span>
+		</span>
+</div>
+<script src="/js/app/jquery-3.2.1.min.js"></script>
+<script src="/js/app/animsition.min.js"></script>
+<script src="/js/app/popper.js"></script>
+<script src="/js/app/bootstrap.min.js"></script>
+<script src="/js/app/main.js"></script>
+<script src="/js/app/wirte.js"></script>
+
+</body>
+</html>
