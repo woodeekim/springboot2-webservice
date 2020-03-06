@@ -19,8 +19,12 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
-
     @GetMapping("/")
+    public String main(){
+        return "main";
+    }
+
+    @GetMapping("/board")
     public String index(Model model, @LoginUser SessionUser user){
 
         model.addAttribute("posts",postsService.findAllDesc());
@@ -28,7 +32,7 @@ public class IndexController {
             model.addAttribute("userName", user.getName());
         }
 
-        return "main";
+        return "index2";
     }
 
     //글 등록 화면으로 이동
