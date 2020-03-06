@@ -21,11 +21,18 @@ public class IndexController {
 
     @GetMapping("/")
     public String main(){
+
         return "main";
     }
 
+    @GetMapping("/posts")
+    public String post() {
+        return "main-detail";
+    }
+
+
     @GetMapping("/list")
-    public String list(Model model, @LoginUser SessionUser user){
+    public String list(Model model,@LoginUser SessionUser user){
 
         model.addAttribute("posts",postsService.findAllDesc());
         if(user != null){
