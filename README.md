@@ -1,19 +1,19 @@
 ## 스프링부트와 AWS로 웹 서비스 구축하기
 
-#### - Visit the the [KEUNWORKS](http://ec2-3-12-184-105.us-east-2.compute.amazonaws.com/) 
-#![real-main](https://user-images.githubusercontent.com/44364909/76126769-5ac29b80-6043-11ea-90e7-5f700f1c40c1.jpg)
-##### 인프라 
+### - Visit the [KEUNWORKS](http://ec2-3-12-184-105.us-east-2.compute.amazonaws.com:8080/) 
+![real-main](https://user-images.githubusercontent.com/44364909/76126769-5ac29b80-6043-11ea-90e7-5f700f1c40c1.jpg)
+#### 인프라 
 ![infra-img](https://user-images.githubusercontent.com/44364909/75813810-f948c580-5dd3-11ea-8357-25c096eb8c29.png)
 
 ---
-#### - 개발환경
+### - 개발환경
 * IDE : IntelliJ U
 * SpringBoot 2
 * Java 8
 * Gradle 4
 
 ---  
-#### - 이용기술
+### - 이용기술
 
 * JPA
     * Spring Data JPA
@@ -27,7 +27,7 @@
  * Travis CI
  * Nginx (개발중)
 ---
-#### - 기능
+### - 기능
 * 게시판 등록/수정/조회 API 구현
 * JPA Auditing으로 생성시간과 수정시간 자동화
 * 스프링 시큐리티를 이용한 구글과 네이버 로그인 연동
@@ -35,14 +35,14 @@
  
 ---
 
-#### - 앞으로 방향
-##### Front-End
+### - 앞으로 방향
+#### Front-End
 * View Template 변경
    * mustache > thymeleaf 
    
 
-##### Back-End
-* JPA를 활용해 게시판을 지속적으로 개선하기
+#### Back-End
+* JPA를 활용해 게시판 지속적으로 개선하기
 
 ---
 
@@ -56,4 +56,3 @@
 > 
 >
 >
----
