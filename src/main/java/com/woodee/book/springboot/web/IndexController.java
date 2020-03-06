@@ -19,16 +19,27 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
-
     @GetMapping("/")
-    public String index(Model model, @LoginUser SessionUser user){
+    public String main(){
+
+        return "main";
+    }
+
+    @GetMapping("/posts")
+    public String post() {
+        return "main-detail";
+    }
+
+
+    @GetMapping("/list")
+    public String list(Model model,@LoginUser SessionUser user){
 
         model.addAttribute("posts",postsService.findAllDesc());
         if(user != null){
             model.addAttribute("userName", user.getName());
         }
 
-        return "index";
+        return "list";
     }
 
     //글 등록 화면으로 이동
@@ -36,6 +47,7 @@ public class IndexController {
     public String postsSave(){
         return "posts-save";
     }
+
 
     //글 수정
     @GetMapping("/posts/update/{id}")
