@@ -1,10 +1,10 @@
 ## 스프링부트와 AWS로 웹 서비스 구축하기
 
 ### - Visit the [KEUNWORKS](http://ec2-3-12-184-105.us-east-2.compute.amazonaws.com:8080/) 
-![real-main](https://user-images.githubusercontent.com/44364909/76126769-5ac29b80-6043-11ea-90e7-5f700f1c40c1.jpg)
-#### 인프라 
-![infra-img](https://user-images.githubusercontent.com/44364909/75813810-f948c580-5dd3-11ea-8357-25c096eb8c29.png)
+![KEUNWORKS_p](https://user-images.githubusercontent.com/44364909/76151552-78ead300-60f9-11ea-8c1d-32b008e78d2b.png)
 
+#### 인프라 
+![aws](https://user-images.githubusercontent.com/44364909/76151485-d9c5db80-60f8-11ea-9156-6871baa6f82b.png)
 ---
 ### - 개발환경
 * IDE : IntelliJ U
