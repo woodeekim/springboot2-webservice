@@ -1,6 +1,6 @@
 ## 스프링부트와 AWS로 웹 서비스 구축하기
 
-### - Visit the [KEUNWORKS](http://ec2-3-12-184-105.us-east-2.compute.amazonaws.com:8080/) 
+### - Visit the [KEUNWORKS](http://ec2-3-12-184-105.us-east-2.compute.amazonaws.com) 
 ![KEUNWORKS_p](https://user-images.githubusercontent.com/44364909/76151552-78ead300-60f9-11ea-8c1d-32b008e78d2b.png)
 
 #### 인프라 
