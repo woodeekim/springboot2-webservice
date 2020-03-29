@@ -3,12 +3,6 @@
 
 # profile.sh 는 앞선 4개 스크립트 파일에서 공용으로 사용할 'profile'과 포트 체크 로직이다.
 
-:<<'END'
-쉬고 있는 profile 찾기
-- real1이 사용 중이라면 real2가 쉬고 있고,
-  real2가 사용 중이라면 real1이 쉬고 있다
-END
-
 function find_idle_profile()
 {
     # 현재 Nginx가 바라보고 있는 스프링 부트가 정상적으로 수행 중인지 확인
