@@ -17,7 +17,7 @@ sleep 10
 for RETRY_COUNT in {1..10}
 do
   RESPONSE=$(curl -s http://localhost:${IDLE_PORT}/profile)
-  UP_COUNT=$(echo ${RESPONSE} | grep 'real' | wc -1)
+  UP_COUNT=$(echo ${RESPONSE} | grep 'real' | wc -l)
 
   if [ ${UP_COUNT} -ge 1 ]
   then # $up_count >= 1 ("real" 문자열이 있는지 검증)
@@ -36,6 +36,6 @@ do
     exit 1
   fi
 
-
-
+  echo "> Health check 연결 실패. 재시도"
+  sleep 10
 done
